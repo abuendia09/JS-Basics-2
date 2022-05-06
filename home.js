@@ -53,10 +53,10 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 const canWeDeliver = (zipCode) => {
     for(let i = 0;i < deliveryAreaZipCodes.length; i++){
         if (deliveryAreaZipCodes[i] === zipCode){
-          return "You are in a delivery zone!"
+          return "You are in a delivery zone!";
         }
     }
-    return "Sorry we can't deliver to that address"
+    return "Sorry we can't deliver to that address";
 }
 
 console.log(canWeDeliver(85205));
@@ -123,9 +123,8 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-deals[0].title = ("15% Off!", "10% Off!")
-  
-console.log(deals);
+deals[0].title = deals[0].title.replace('10','15');
+
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -139,3 +138,8 @@ console.log(deals);
     to be displaying wrong on the live site.
 */
 
+deals[1].desc = deals[1].desc.replace('March', 'April').trim();
+console.log(deals);
+
+
+// I added the trim with the review!!

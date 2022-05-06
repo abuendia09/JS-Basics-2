@@ -30,7 +30,14 @@
     'kids'
 */
 
-//CODE HERE
+const pizza = {
+    name: 'Meat lovers',
+    price: 15,
+    category: 'entree',
+    popularity: 10,
+    rating: 8,
+    tags: ['gluten-free','favorite','not vegan']
+}
 
 
 
@@ -42,8 +49,7 @@
     Use dot notation to access the value.
 */
 
-//CODE HERE
-
+console.log(pizza.name); 
 
 /*
     Second, log the second tag in your pizza's
@@ -52,7 +58,7 @@
     get the value.
 */
 
-//CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -62,8 +68,9 @@
     Print the value of your new price variable.
 */
 
-//CODE HERE
+const {price} = pizza;
 
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -72,8 +79,9 @@
     Print the value of your category variable. 
 */
 
-//CODE HERE
+const {category} = pizza
 
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -87,9 +95,47 @@
     data in some functions that you'll write.
 */
 
-//CODE HERE
-
-
+const foodArr = [
+    {
+        name: 'Pepperoni Pizza',
+        price: 15,
+        category: 'entree',
+        popularity: 100,
+        rating: 10,
+        tags:['gluten-free','favorite','not vegan']
+    },
+    {
+        name: 'Wings',
+        price: 16,
+        category: 'entree',
+        popularity: 90,
+        rating: 9,
+        tags: ['dairy free','favorite','not vegan']
+    },
+    {
+        name: 'Vegan Pizza',
+        price: 20,
+        category: 'entree',
+        popularity: 60,
+        rating: 6,
+        tags: ['dairy free', 'special', 'vegan']
+    },
+    {   name: 'Kids Pizza',
+        price: 10,
+        category: 'entree',
+        popularity: 80,
+        rating: 8,
+        tags: ['gluten-free', 'special', 'not vegan']
+    },
+    {
+        name: 'Cheese Sticks',
+        price: 12,
+        category: 'appetizer',
+        popularity: 40,
+        rating: 4,
+        tags: ['gluten-free', 'special', 'not vegan']
+    }
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -103,10 +149,19 @@
     your food objects has.
 */
 
-//CODE HERE
+// CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food) => {
+    if(food.tags.includes('vegan')) {
+        return food.tags.includes('vegan')
+    }
+});
 
+
+//learned this method through the review
+
+// const filteredFood = foodArr.filter((food) => food.tags.includes('vegan'))
+// console.log(filteredFood);
 
 
 //////////////////PROBLEM 5////////////////////
@@ -123,7 +178,6 @@
 
     The property will be a string (rating,
     popularity, or price)
-
     The number will be the number that you want
     to compare against 
 
@@ -148,9 +202,11 @@
     Return the filtered array from the entire function
 */
 
-//CODE HERE
+// const filterByProperty = (property, number, type) => {
+//     let filteredArr = foodArr.filter()
 
-
+// }
+// console.log(filteredArr);
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
